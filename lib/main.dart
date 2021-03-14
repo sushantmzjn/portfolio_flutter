@@ -8,14 +8,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.grey[700]),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.indigo[300]),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My Portfolio'),
+          title: Text(
+            'My Portfolio',
+          ),
         ),
         drawer: SideDrawer(),
         body: Center(
-          child: Text('My project'),
+          child: Text('Home'),
         ),
       ),
     );
