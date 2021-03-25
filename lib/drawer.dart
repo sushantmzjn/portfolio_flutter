@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:myPortfolio/pages/contact.dart';
+import 'package:myPortfolio/pages/resume.dart';
 import 'package:myPortfolio/pages/skills.dart';
 import './pages/about.dart';
 
@@ -10,6 +12,7 @@ class SideDrawer extends StatelessWidget {
         builder: (context) => AlertDialog(
               title: Text('Are You Sure?'),
               actions: [
+                // ignore: deprecated_member_use
                 FlatButton(
                   child: Text(
                     'No',
@@ -19,6 +22,7 @@ class SideDrawer extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                // ignore: deprecated_member_use
                 FlatButton(
                   child: Text(
                     'Yes',
@@ -89,6 +93,22 @@ class SideDrawer extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Skills()));
+              }),
+          ListTile(
+              leading: Icon(Icons.phone),
+              title: Text('Contacts'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Contacts()));
+              }),
+          ListTile(
+              leading: Icon(Icons.pause_presentation),
+              title: Text('Resume'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Resume()));
               }),
           ListTile(
               leading: Icon(Icons.info_outline),

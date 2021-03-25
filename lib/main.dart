@@ -11,16 +11,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.indigo[300]),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'My Portfolio',
+          appBar: AppBar(
+            title: Text(
+              'My Portfolio',
+            ),
           ),
-        ),
-        drawer: SideDrawer(),
-        body: Center(
-          child: Text('Home'),
-        ),
-      ),
+          drawer: SideDrawer(),
+          body: Center(
+            child: Text('Home'),
+          )),
     );
   }
 }
